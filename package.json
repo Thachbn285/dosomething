@@ -70,7 +70,8 @@
     "apps/do-event/*",
     "apps/do-sport/*",
     "apps/do-hospital/*",
-    "libs/database/*"
+    "libs/database/*",
+    "libs/shared/*"
   ],
   "dependencies": {
     "@nestjs/common": "^10.0.2",
