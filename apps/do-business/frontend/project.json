@@ -1,3 +1,10 @@
 {
-  "name": "@dosomething/do-business-frontend"
+  "name": "@dosomething/do-business-frontend",
+  "targets": {
+    "dev": {
+      "options": {
+        "args": ["--port", "3001"]
+      }
+    }
+  }
 }

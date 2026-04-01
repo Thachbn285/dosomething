@@ -1,3 +1,10 @@
 {
-  "name": "@dosomething/do-cinema-frontend"
+  "name": "@dosomething/do-cinema-frontend",
+  "targets": {
+    "dev": {
+      "options": {
+        "args": ["--port", "3002"]
+      }
+    }
+  }
 }

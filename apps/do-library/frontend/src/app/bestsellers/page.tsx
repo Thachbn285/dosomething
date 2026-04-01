@@ -1,4 +1,4 @@
-import BookCard from '@/components/book/BookCard';
+import Link from 'next/link';
 
 export default function BestsellersPage() {
   const bestsellers = [
@@ -188,18 +188,18 @@ export default function BestsellersPage() {
         {/* CTA Section */}
         <div className="mt-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl text-white p-12 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Didn't find what you're looking for?
+            Didn&apos;t find what you&apos;re looking for?
           </h2>
           <p className="text-lg text-indigo-100 mb-8">
             Browse our full collection and discover thousands of books across
             all categories
           </p>
-          <a
+          <Link
             href="/books"
             className="inline-block px-8 py-3 bg-white text-indigo-600 font-semibold rounded-lg hover:shadow-lg transition-all"
           >
             Explore All Books →
-          </a>
+          </Link>
         </div>
       </div>
     </div>

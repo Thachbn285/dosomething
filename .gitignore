@@ -54,3 +54,7 @@ fix-backend-names.js
 fix-frontend-names.js
 update-all-frontend-names.js
 update-backend-names.js
+
+.nx/polygraph
+.claude/worktrees
+.claude/settings.local.json

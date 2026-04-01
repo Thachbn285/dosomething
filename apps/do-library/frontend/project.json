@@ -1,0 +1,10 @@
+{
+  "name": "@dosomething/do-library-frontend",
+  "targets": {
+    "dev": {
+      "options": {
+        "args": ["--port", "3005"]
+      }
+    }
+  }
+}

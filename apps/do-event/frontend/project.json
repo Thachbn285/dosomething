@@ -1,3 +1,10 @@
 {
-  "name": "@dosomething/do-event-frontend"
+  "name": "@dosomething/do-event-frontend",
+  "targets": {
+    "dev": {
+      "options": {
+        "args": ["--port", "3003"]
+      }
+    }
+  }
 }

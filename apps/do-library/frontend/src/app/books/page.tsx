@@ -1,19 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import BookFilters, {
   type FilterState,
 } from '../../components/book/BookFilters';
 import BookList from '../../components/book/BookList';
 
-export default function BooksPage() {
+function BooksContent() {
+  const searchParams = useSearchParams();
+  const initialCategory = searchParams.get('category') || '';
+
   const [filters, setFilters] = useState<FilterState>({
     search: '',
-    category: '',
+    category: initialCategory,
     rating: 0,
     priceRange: [0, 100],
     sortBy: 'popular',
   });
+
+  useEffect(() => {
+    const category = searchParams.get('category');
+    if (category) {
+      setFilters((prev) => ({ ...prev, category }));
+    }
+  }, [searchParams]);
 
   return (
     <div className="bg-gray-50 min-h-screen pt-8 pb-12">
@@ -37,10 +48,18 @@ export default function BooksPage() {
 
           {/* Books Grid */}
           <div className="lg:col-span-3">
-            <BookList />
+            <BookList filter={filters} />
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+export default function BooksPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BooksContent />
+    </Suspense>
   );
 }

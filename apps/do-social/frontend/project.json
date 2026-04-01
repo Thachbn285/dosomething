@@ -1,0 +1,38 @@
+{
+  "name": "do-social-frontend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/do-social/frontend/src",
+  "tags": ["type:frontend", "scope:social"],
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "next dev --port 3006",
+        "cwd": "apps/do-social/frontend"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "next build",
+        "cwd": "apps/do-social/frontend"
+      },
+      "outputs": ["apps/do-social/frontend/.next"]
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "next start",
+        "cwd": "apps/do-social/frontend"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "next lint",
+        "cwd": "apps/do-social/frontend"
+      }
+    }
+  }
+}

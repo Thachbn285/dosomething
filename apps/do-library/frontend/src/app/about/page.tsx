@@ -73,7 +73,7 @@ export default function AboutPage() {
               sharing their love of reading.
             </p>
             <p>
-              Whether you're looking for your next favorite read, want to
+              Whether you&apos;re looking for your next favorite read, want to
               connect with fellow readers, or wish to share your thoughts on
               books, DoLibrary is your ultimate destination.
             </p>

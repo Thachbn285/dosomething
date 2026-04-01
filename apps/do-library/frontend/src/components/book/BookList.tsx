@@ -1,18 +1,9 @@
 'use client';
 
-import { useState } from 'react';
 import BookCard from './BookCard';
 import type { FilterState } from './BookFilters';
 
-export default function BookList() {
-  const [filter] = useState<FilterState>({
-    search: '',
-    category: '',
-    rating: 0,
-    priceRange: [0, 100],
-    sortBy: 'popular',
-  });
-
+export default function BookList({ filter }: { filter: FilterState }) {
   // Sample books data
   const allBooks = [
     {

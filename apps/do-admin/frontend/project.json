@@ -1,3 +1,10 @@
 {
-  "name": "@dosomething/do-admin-frontend"
+  "name": "@dosomething/do-admin-frontend",
+  "targets": {
+    "dev": {
+      "options": {
+        "args": ["--port", "3000"]
+      }
+    }
+  }
 }
