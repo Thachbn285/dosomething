@@ -2,5 +2,36 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./apps/do-solution"
+    },
+    {
+      "path": "./apps/do-admin/frontend"
+    },
+    {
+      "path": "./apps/do-cinema/frontend"
+    },
+    {
+      "path": "./apps/do-business/frontend"
+    },
+    {
+      "path": "./apps/do-library/frontend"
+    },
+    {
+      "path": "./apps/do-event/frontend"
+    },
+    {
+      "path": "./apps/do-cinema/backend"
+    },
+    {
+      "path": "./apps/do-sport/backend"
+    },
+    {
+      "path": "./apps/do-hospital/backend"
+    },
+    {
+      "path": "./libs/database/prisma-postgres"
+    }
+  ]
 }
